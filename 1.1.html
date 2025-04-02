@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Шаблон лабораторной работы</title>
+	</head>
+	<body>
+		<h1>Лабораторная 1.1</h1>
+		<script>
+			let degCel; 
+			let degFar;
+			let result;
+			
+			
+			degCel = parseFloat (prompt ("Введите температуру в  \u00B0С ", 100) );
+			
+			console.log (degCel);
+			
+			degFar = (degCel * 9) / 5 + 32;
+			
+			console.log ( degFar );	
+			
+			result = degFar.toFixed(2);
+			
+			console.log ( result );
+	
+		</script>
+	</body>
+</html>
