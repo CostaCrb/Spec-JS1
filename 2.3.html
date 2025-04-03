@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Лаба 2.3</title>
+	</head>
+	<body>
+		<h1>Лабораторная 2.3</h1>
+		<style>
+			.red {background-color:red}
+		</style>
+		<script>
+			let row;
+			let col;
+			let i;
+			let j;
+			let alarm;
+			
+			row = parseInt (prompt ("Введите количество строк:", ""))
+				
+			
+			if  ((isNaN(row)) || (row <= 0)) {
+				alarm = "Введите корректное число строк!";
+				document.write(alarm);
+				}
+			else {
+			
+				col = parseInt (prompt ("Введите количество столбцов:", ""))	
+					
+					if  ((isNaN(col)) || (col <= 0)) {
+						alarm = "Введите корректное число столбцов!";
+						document.write(alarm);
+					}
+					else {
+					
+						document.write('<table border=1>');
+
+
+
+						for (let i = 1; i <= row; i++) {
+							document.write('<tr>');
+							for(let j = 1; j <= col; j++) {
+							
+								if ((i == 1) || (j == 1)) {
+									document.write('<td class="red">');
+									}
+								else {
+									document.write('<td>');
+								}
+								document.write(i * j);
+								document.write('</td>');
+							}
+							document.write('</tr>');
+						}
+									
+						document.write('</table>');
+					}
+				}
+
+		</script>
+	</body>
+</html>

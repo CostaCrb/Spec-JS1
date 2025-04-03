@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Лаба 2.2</title>
+	</head>
+	<body>
+		<h1>Лабораторная 2.2</h1>
+		<script>
+			let crowNo; 
+			let result;
+			let txt;
+			let crowNo2;
+			
+			crowNo = parseInt (prompt ("введите количество ворон:", ));
+			
+			if  ((isNaN(crowNo)) || (crowNo < 0)) 
+				result = "Введите целое число ворон!";
+			
+			
+			
+			else {
+			
+			crowNo2 = crowNo % 100;
+				
+			    if ((crowNo2 >= 11) && (crowNo2 <= 14))
+                    txt = "ворон"; 	
+				
+				else
+					switch (crowNo % 10) {
+						case 1:
+							txt = "ворона";
+							break;
+						case 2:
+						case 3:
+						case 4:
+							txt = "вороны";
+							break;							
+						default:
+							txt = "ворон";					
+					
+					}
+
+			
+			result = `На ветке ${crowNo} ${txt}`;
+
+			}	
+			
+			console.log (result);
+			document.write (result);
+
+		</script>
+	</body>
+</html>
