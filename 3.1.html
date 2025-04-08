@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Лаба 3.1</title>
+	</head>
+	<body>
+		<h1>Лабораторная 3.1</h1>
+
+		<script>			
+			var k1;
+			var k2;
+			var result;
+
+			
+			function gcd (k1, k2) {
+				let k3;
+				while ((k3 = k1 % k2) != 0) {
+				k1 = k2;
+				k2 = k3;
+				}
+				result = k2;
+
+			}
+			
+			k1 = parseInt (prompt ("Введите k1", ""));
+				if  ((isNaN(k1)) || (k1 == 0)) {
+				alarm = "Введите корректное число!";
+				document.write(alarm);
+				}
+				else {
+					k2 = parseInt (prompt ("Введите k2", ""));
+					if  ((isNaN(k2)) || (k2 == 0)) {
+				alarm = "Введите корректное число!";
+				document.write(alarm);
+					}
+					else {
+						document.write ( `k1: ${k1} <br/>` )
+						document.write ( `k2: ${k2} <br/>` )
+									
+						gcd (k1, k2);
+						document.write ( `ответ: ${result} <br/>` )
+					}	
+				}
+		</script>
+	</body>
+</html>

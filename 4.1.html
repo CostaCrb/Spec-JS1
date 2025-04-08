@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Лаба 4.1</title>
+	</head>
+	<body>
+		<h1>Лабораторная 4.1</h1>
+
+		<script>			
+
+			let link1 = new Object();
+
+			link1.title = 'Ссылка 1';
+			link1.url = 'https://wikipedia.org';
+			link1.render = linkRender;
+
+
+			function linkRender (openInNewWindow) {
+				if (openInNewWindow)
+					document.write ( `<a href="${this.url}" target="_blank">${this.title}</a> ` );
+				else 
+					document.write ( `<a href="${this.url}">${this.title}</a> ` );
+			}
+
+			link1.render ();
+			document.write (`<br/>`)
+			link1.render (true);
+
+
+		</script>
+	</body>
+</html>

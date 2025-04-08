@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Лаба 4.2</title>
+	</head>
+	<body>
+		<h1>Лабораторная 4.2</h1>
+
+		<script>			
+			let namesList = [];
+			var userName;
+			do {
+				userName = prompt ("Введите имя: ", "");
+				
+				if (userName)
+					namesList.push (userName)			
+			}
+			
+			while (userName);
+			namesList.sort ();
+			document.write ( namesList.join (' , ') );
+			
+
+
+		</script>
+	</body>
+</html>
